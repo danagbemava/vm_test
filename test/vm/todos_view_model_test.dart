@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart';
 import 'package:mockito/mockito.dart';
@@ -8,24 +6,16 @@ import 'package:vm_test/repos/todos_repo.dart';
 import 'package:vm_test/services/api_service.dart';
 import 'package:vm_test/view_models/todos_view_model.dart';
 
-class MockApiService extends Mock implements ApiService {
-  final MockClient _client;
-
-  MockApiService(this._client);
-}
+class MockApiService extends Mock implements ApiService {}
 
 class MockClient extends Mock implements Client {}
 
-class MockTodoRepository extends Mock implements TodosRepo {
-  final MockApiService _apiService;
-
-  MockTodoRepository(this._apiService);
-}
+class MockTodoRepository extends Mock implements TodosRepo {}
 
 void main() {
-  final client = MockClient();
-  final apiService = MockApiService(client);
-  final repo = MockTodoRepository(apiService);
+  // final client = MockClient();
+  // final apiService = MockApiService();
+  final repo = MockTodoRepository();
 
   group('test getTodosMethod', () {
     final baseUrl = 'https://jsonplaceholder.typicode.com/todos';
