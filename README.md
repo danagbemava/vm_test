@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/danagbemava/vm_test/branch/master/graph/badge.svg)](https://codecov.io/gh/danagbemava/vm_test)
+
 # vm_test
 
 A new Flutter project.
